@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Weather - Weather-driven Health Insights</title>
+    <meta name="description" content="Transform weather and environmental data into personalized health solutions with our advanced machine learning technology.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'healthy-teal': '#4a9b8e',
+                        'healthy-teal-dark': '#22787b', //'#3a7c72',
+                        'healthy-beige': '#f5f3f0',
+                        'healthy-beige-light': '#faf9f7'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --healthy-teal: #4a9b8e;
+            --healthy-teal-dark: #22787b, //#3a7c72;
+            --healthy-beige: #f5f3f0;
+            --healthy-beige-light: #faf9f7;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--healthy-beige-light) 0%, var(--healthy-beige) 100%);
+        }
+        
+        .parallax-hero {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[var(--healthy-beige-light)]">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="relative w-10 h-10">
+                        <img src="logo.png" alt="Healthy Weather Logo" class="w-full h-full object-contain" />
+                    </div>
+                    <span class="text-xl font-bold text-[var(--healthy-teal-dark)]">Healthy Weather</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="text-gray-700 hover:text-[var(--healthy-teal-dark)] transition-colors">About</a>
+                    <a href="#technology" class="text-gray-700 hover:text-[var(--healthy-teal-dark)] transition-colors">Technology</a>
+                    <a href="#product" class="text-gray-700 hover:text-[var(--healthy-teal-dark)] transition-colors">Products</a>
+                    <a href="#contact" class="text-gray-700 hover:text-[var(--healthy-teal-dark)] transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center gradient-bg parallax-hero">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--healthy-beige)]/20"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+            <div class="mb-8">
+                <div class="w-24 h-24 mx-auto mb-6">
+                    <img src="logo.png" alt="Healthy Weather Logo" class="w-full h-full object-contain" />
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-[var(--healthy-teal-dark)] mb-6 leading-tight">
+                Weather-driven health insights for a better tomorrow
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                Transforming environmental data into personalized health solutions through advanced machine learning and predictive analytics
+            </p>
+            <a href="#about" class="inline-flex items-center bg-[var(--healthy-teal)] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[var(--healthy-teal-dark)] transition-all transform hover:scale-105 shadow-lg">
+                Learn More
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-[var(--healthy-teal-dark)] mb-6">About Healthy Weather</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                        At Healthy Weather, we believe that understanding the connection between environmental conditions and personal health is the key to better living. Our mission is to transform complex weather and environmental data into actionable health insights that help people make informed decisions about their daily activities and well-being.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        By combining real-time weather forecasting, comprehensive environmental monitoring, and cutting-edge machine learning algorithms, we create personalized health solutions that adapt to your unique sensitivities and conditions. Our approach bridges the gap between meteorological science and health science, delivering precision insights when you need them most.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 bg-[var(--healthy-beige-light)]">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-[var(--healthy-teal-dark)] mb-6">Our Technology</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Powered by advanced data science and machine learning, our platform processes millions of environmental data points to deliver precise health insights.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Weather Forecasting -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.002 4.002 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-3">Weather Forecasting</h3>
+                    <p class="text-gray-600">Hyperlocal weather predictions with precision down to your neighborhood level.</p>
+                </div>
+
+                <!-- Environmental Data -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-3">Environmental Data</h3>
+                    <p class="text-gray-600">Comprehensive pollen counts, air quality metrics, and environmental monitoring.</p>
+                </div>
+
+                <!-- Proprietary Modeling -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-3">Proprietary Modeling</h3>
+                    <p class="text-gray-600">Advanced machine learning algorithms that correlate environmental factors with health outcomes.</p>
+                </div>
+
+                <!-- Risk Scoring -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-3">Risk Scoring</h3>
+                    <p class="text-gray-600">Personalized health risk assessments based on individual sensitivities and conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-[var(--healthy-teal-dark)] mb-6">Featured Product</h2>
+                <div class="bg-gradient-to-r from-[var(--healthy-teal)] to-[var(--healthy-teal-dark)] text-white inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    Coming Soon
+                </div>
+                <h3 class="text-3xl font-bold text-[var(--healthy-teal-dark)] mb-4">Allergy Tracker App</h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    Your personal allergy companion that combines daily symptom tracking, environmental alerts, and personalized forecasts to help you stay ahead of allergy triggers.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-2">Daily Diary</h4>
+                            <p class="text-gray-600">Track your symptoms, activities, and environmental exposures with our intuitive logging system.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-2">Smart Alerts</h4>
+                            <p class="text-gray-600">Receive timely notifications about high pollen days, air quality changes, and weather patterns that may trigger symptoms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-[var(--healthy-teal)] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-[var(--healthy-teal-dark)] mb-2">Personalized Forecasts</h4>
+                            <p class="text-gray-600">Get customized predictions based on your unique sensitivities and historical health patterns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-2xl font-bold text-[var(--healthy-teal-dark)] mb-4 text-center">Get Early Access</h4>
+                    <p class="text-gray-600 text-center mb-6">Be the first to know when the Allergy Tracker app launches</p>
+                    
+                    <form id="allergySignupForm" class="space-y-4">
+                        <div class="relative">
+                            <svg class="absolute left-3 top-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                            </svg>
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Enter your email for early access"
+                                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--healthy-teal)] focus:border-transparent transition-colors"
+                                required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-[var(--healthy-teal)] text-white py-3 px-6 rounded-md hover:bg-[var(--healthy-teal-dark)] transition-colors flex items-center justify-center gap-2"
+                        >
+                            <span id="signupButtonText">Get Early Access</span>
+                            <svg id="signupLoader" class="hidden h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+                        <div id="signupMessage" class="hidden text-sm"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[var(--healthy-beige-light)]">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-[var(--healthy-teal-dark)] mb-6">Contact Us</h2>
+                <p class="text-xl text-gray-600">Ready to partner with us or learn more about our technology?</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <svg class="absolute left-3 top-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Your name"
+                                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--healthy-teal)] focus:border-transparent transition-colors"
+                                required
+                            />
+                        </div>
+                        <div class="relative">
+                            <svg class="absolute left-3 top-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                            </svg>
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="Your email"
+                                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--healthy-teal)] focus:border-transparent transition-colors"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <svg class="absolute left-3 top-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                        <textarea
+                            id="contactMessage"
+                            placeholder="Your message"
+                            rows="5"
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--healthy-teal)] focus:border-transparent transition-colors resize-vertical"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-[var(--healthy-teal)] text-white py-3 px-6 rounded-md hover:bg-[var(--healthy-teal-dark)] transition-colors flex items-center justify-center gap-2"
+                    >
+                        <span id="contactButtonText">Send Message</span>
+                        <svg id="contactLoader" class="hidden h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <svg id="contactSendIcon" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                    </button>
+                    <div id="contactMessage" class="hidden text-sm"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--healthy-teal-dark)] text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-8 h-8">
+                        <img src="logo.png" alt="Healthy Weather Logo" class="w-full h-full object-contain" />
+                    </div>
+                    <span class="text-lg font-semibold">Healthy Weather</span>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm opacity-80 mb-2">© 2025 Healthy Weather. All rights reserved.</p>
+                    <div class="space-x-4">
+                        <a href="#" class="text-sm hover:text-[var(--healthy-beige)] transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-sm hover:text-[var(--healthy-beige)] transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        // Allergy Signup Form
+        document.getElementById('allergySignupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('signupEmail').value;
+            const button = e.target.querySelector('button');
+            const buttonText = document.getElementById('signupButtonText');
+            const loader = document.getElementById('signupLoader');
+            const messageDiv = document.getElementById('signupMessage');
+            
+            // Show loading state
+            button.disabled = true;
+            buttonText.textContent = 'Signing up...';
+            loader.classList.remove('hidden');
+            messageDiv.classList.add('hidden');
+            
+            try {
+                const response = await fetch('/api/allergy-signup.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    messageDiv.className = 'text-sm text-green-600 flex items-center gap-2';
+                    messageDiv.innerHTML = `
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        ${data.message}
+                    `;
+                    document.getElementById('signupEmail').value = '';
+                    buttonText.textContent = 'Signed up!';
+                } else {
+                    throw new Error(data.error || 'Signup failed');
+                }
+            } catch (error) {
+                messageDiv.className = 'text-sm text-red-600 flex items-center gap-2';
+                messageDiv.innerHTML = `
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    ${error.message || 'Network error. Please try again.'}
+                `;
+                buttonText.textContent = 'Get Early Access';
+            }
+            
+            // Reset button state
+            button.disabled = false;
+            loader.classList.add('hidden');
+            messageDiv.classList.remove('hidden');
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            const button = e.target.querySelector('button');
+            const buttonText = document.getElementById('contactButtonText');
+            const loader = document.getElementById('contactLoader');
+            const sendIcon = document.getElementById('contactSendIcon');
+            const messageDiv = document.getElementById('contactMessage');
+            
+            // Show loading state
+            button.disabled = true;
+            buttonText.textContent = 'Sending...';
+            loader.classList.remove('hidden');
+            sendIcon.classList.add('hidden');
+            messageDiv.classList.add('hidden');
+            
+            try {
+                const response = await fetch('/api/contact.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    messageDiv.className = 'text-sm text-green-600 flex items-center gap-2';
+                    messageDiv.innerHTML = `
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        ${data.message}
+                    `;
+                    document.getElementById('contactName').value = '';
+                    document.getElementById('contactEmail').value = '';
+                    document.getElementById('contactMessage').value = '';
+                } else {
+                    throw new Error(data.error || 'Failed to send message');
+                }
+            } catch (error) {
+                messageDiv.className = 'text-sm text-red-600 flex items-center gap-2';
+                messageDiv.innerHTML = `
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    ${error.message || 'Network error. Please try again.'}
+                `;
+            }
+            
+            // Reset button state
+            button.disabled = false;
+            buttonText.textContent = 'Send Message';
+            loader.classList.add('hidden');
+            sendIcon.classList.remove('hidden');
+            messageDiv.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

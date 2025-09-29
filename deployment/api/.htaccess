@@ -1,0 +1,20 @@
+
+# Allow PHP execution
+AddHandler application/x-httpd-php .php
+
+# CORS headers
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header add Access-Control-Allow-Headers "Content-Type"
+
+# Security headers
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+
+# Cache control for API endpoints
+<FilesMatch "\.php$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</FilesMatch>

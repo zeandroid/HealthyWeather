@@ -1,0 +1,76 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --healthy-teal: #4db6ac;
+  --healthy-teal-light: #80cbc4;
+  --healthy-teal-dark: #00695c;
+  --healthy-beige: #f5f5dc;
+  --healthy-beige-light: #faf8f1;
+  --healthy-beige-dark: #d4c5a0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.parallax-hero {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .parallax-hero {
+    background-attachment: scroll;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--healthy-beige-light) 0%, var(--healthy-beige) 100%);
+}
+
+.teal-gradient {
+  background: linear-gradient(135deg, var(--healthy-teal) 0%, var(--healthy-teal-dark) 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--healthy-beige-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--healthy-teal);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--healthy-teal-dark);
+}
