@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // Database configuration
-define('DB_PATH', __DIR__ . '/../data/dev.db');
+define('DB_PATH', __DIR__ . '/../../data/HW/hwdb.db');
 define('ALLERGY_EMAIL', 'allergy@healthyweather.us');
 define('CONTACT_EMAIL', 'info@healthyweather.us');
 
@@ -29,7 +29,7 @@ function getDatabase() {
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
     } catch (PDOException $e) {
-        error_log('Database connection error: ' . $e->getMessage());
+        error_log('Database connection error: ' . $e->getMessage() . ' PATH: ' . DB_PATH);
         http_response_code(500);
         echo json_encode(['success' => false, 'error' => 'Database connection failed']);
         exit;
